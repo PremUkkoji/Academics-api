@@ -1,0 +1,25 @@
+{
+  "name": "academics-api",
+  "version": "1.0.0",
+  "description": "api for Academics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PremUkkoji/Academics-api.git"
+  },
+  "author": "Prem Ukkoji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PremUkkoji/Academics-api/issues"
+  },
+  "homepage": "https://github.com/PremUkkoji/Academics-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7",
+    "nodemon": "^1.19.4"
+  }
+}
