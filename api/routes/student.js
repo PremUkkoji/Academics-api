@@ -3,7 +3,9 @@ const router = express.Router();
 const mongoose = require('mongoose');
 
 const Student = require('../models/students');
+const Faculty = require('../models/faculties');
 
+// create student
 router.post("/", (req, res, next) => {
     Student.find({ email: req.body.email })
     .exec()
@@ -11,7 +13,7 @@ router.post("/", (req, res, next) => {
         if(student.length >= 1)
         {
             return res.status(409).json({
-                message: 'mail exits'
+                message: 'Email already exists'
             });
         }
         else
@@ -20,6 +22,7 @@ router.post("/", (req, res, next) => {
                 _id: new mongoose.Types.ObjectId(),
                 name: req.body.name,
                 usn: req.body.usn,
+                div: req.body.div,
                 email: req.body.email,
                 password: req.body.password,
                 contact: req.body.contact
@@ -27,7 +30,7 @@ router.post("/", (req, res, next) => {
             student.save()
             .then(result => {
                 res.status(201).json({
-                    message: 'student created'
+                    message: 'Student successfully created'
                 });
             })
             .catch(err => {

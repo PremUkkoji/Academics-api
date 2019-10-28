@@ -2,15 +2,15 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-router.get("/:Id", (req, res, next) => {
+router.get("/:Usn", (req, res, next) => {
     res.status(200).json({
-        message: 'studentMarkseet'
+        message: 'get'
     });
 });
 
-router.patch("/:Id", (req, res, next) => {
+router.patch("/:Usn", (req, res, next) => {
     res.status(200).json({
-        message: 'studentMarkseet1'
+        message: 'Updated'
     });
 });
 
