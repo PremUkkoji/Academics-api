@@ -1,7 +1,7 @@
 {
     "env": {
-        "MLAB_USERNAME": "premukkoji",
-        "MLAB_PASSWORD": "MacB00k",
+        "MLAB_USERNAME": "",
+        "MLAB_PASSWORD": "",
         "JWT_KEY": "secret"
     }
 }
